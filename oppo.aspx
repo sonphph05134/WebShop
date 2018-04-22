@@ -1,0 +1,35 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="oppo.aspx.cs" Inherits="oppo" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="CphMain" Runat="Server">
+   <div class="container">
+        <div class="row">
+				<div class="col-lg-12">
+					<ul class="breadcrumb">
+						<li><a href="\">TRANG CHỦ</a></li>
+                        <li><a href="#">SẢN PHẨM</a></li>
+						<li><a href="oppo.aspx">Oppo</a></li>
+					</ul>
+				</div>
+		</div>
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="IDSANPHAM" DataSourceID="SqlDataSource14" RepeatColumns="4" RepeatDirection="Horizontal">
+        <ItemTemplate>
+                    <asp:Image ID="URl" runat="server" ImageUrl='<%# "~/images/"+Eval("URL") %>' />
+                    <br />
+                    <br />
+                    <asp:Label ID="TENSANPHAMLabel" runat="server" Text='<%# Eval("TENSANPHAM") %>' />
+                    <br />
+                    Giá:
+                    <asp:Label ID="GIASANPHAMLabel" runat="server" Text='<%# Eval("GIASANPHAM") %>' />
+                    <br />
+<br />
+            <br />
+        </ItemTemplate>
+    </asp:DataList>
+        <asp:SqlDataSource ID="SqlDataSource14" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="4" Name="IDDANHMUC" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+</div>
+</asp:Content>
+
