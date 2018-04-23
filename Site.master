@@ -5,12 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Mobile Shop</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css"  type="text/css">
-    <link rel="stylesheet" href="/fonts/font-slider.css" type="text/css">
-	<script src="/js/jquery-2.1.1.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css"  type="text/css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/font-awesome/css/font-awesome.min.css"  type="text/css">
+    <link rel="stylesheet" href="~/fonts/font-slider.css" type="text/css">
+	<script src="~/js/jquery-2.1.1.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,7 +26,7 @@
 					    </select>
 					    <select class="currency">
 						    <option value="USD" selected>USD</option>
-						    <option value="EUR">VND</option>
+						    <option value="VND">VND</option>
 					    </select>
 				    </div>
 				    <div class="col-xs-6">
@@ -42,7 +42,7 @@
 	    <header class="container">
 		    <div class="row">
 			    <div class="col-md-4">
-				    <div id="logo"><img src="/images/logo.png" /></div>
+				    <div id="logo"><asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png"/></div>
 			    </div>
 		    </div>
 	    </header>
@@ -94,7 +94,7 @@
 			    <div class="wrap-footer">
 				    <div class="row">
 					    <div class="col-md-3 col-footer footer-1">
-						    <img src="/images/logofooter.png" />
+						    <img src="~/images/logofooter.png" />
 						    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					    </div>
 					    <div class="col-md-3 col-footer footer-2">

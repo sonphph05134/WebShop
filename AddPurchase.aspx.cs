@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class addCategory : System.Web.UI.Page
+public partial class AddPurchase : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-    protected void InsertCmd(object sender, FormViewInsertedEventArgs e)
+    protected void InsertedCmd(object sender, FormViewInsertedEventArgs e)
     {
         if (e.Exception != null)
         {

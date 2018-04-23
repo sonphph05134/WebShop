@@ -4,14 +4,6 @@
     <div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="\">TRANG CHỦ</a></li>
-						<li><a href="contact.aspx">LIÊN HỆ</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
 					<div class="heading"><h1>LIÊN HỆ VỚI CHÚNG TÔI</h1></div>
 				</div>
 				<div class="col-md-6" style="margin-bottom: 30px;">

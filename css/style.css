@@ -131,7 +131,9 @@ header .form-search button:hover {color: #eee;}
 .product:after, .product:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
 .product .image-more {margin-top: 15px;}
 .product .image-more img{border: 1px solid #DDD;max-height: 85px;margin-bottom: 10px;}
-.product .buttons {margin: 10px 0;}
+.product .buttons {margin: 10px 0;
+    width: 32px;
+}
 .product .buttons a {background-color: #eee;}
 .product .name {border-bottom: 1px solid #eee;}
 .product .name h3{font-weight: 500;font-size: 20px;color: #666;margin-top: 10px;}

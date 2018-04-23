@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="addCategory.aspx.cs" Inherits="addCategory" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="CphMain" Runat="Server">
-    <div class="themsp">
-        Thêm Danh Mục Sản Phẩm
+    <div>
+        <p class="bg-primary">Thêm Danh Mục Sản Phẩm</p>
         </br>
     </div>
-    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="IDDANHMUC" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="IDDANHMUC" DataSourceID="SqlDataSource1" DefaultMode="Insert" OnItemInserted="InsertCmd">
         <EditItemTemplate>
             IDDANHMUC:
             <asp:Label ID="IDDANHMUCLabel1" runat="server" Text='<%# Eval("IDDANHMUC") %>' />
@@ -17,11 +17,13 @@
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
         <InsertItemTemplate>
-            TENDM:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tên Danh Mục :&nbsp;&nbsp;
             <asp:TextBox ID="TENDMTextBox" runat="server" Text='<%# Bind("TENDM") %>' />
             <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
             IDDANHMUC:
@@ -47,5 +49,13 @@
             <asp:Parameter Name="IDDANHMUC" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
+    <div>
+        <br />
+        <asp:Label ID="errmsg" runat="server" ForeColor="Red"/>  
+    </div>
+     <div>
+        </br>
+         <a class="bg-primary" href="categoryManagment.aspx">Xem Danh Sách Danh Mục Sản Phẩm</a>
+    </div>
 </asp:Content>
 

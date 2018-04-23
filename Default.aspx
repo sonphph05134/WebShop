@@ -16,27 +16,12 @@
 						    <div class="carousel-inner">
 							    <div class="item active">
 								    <img src="/images/main-banner1-1903x600.jpg" alt="First slide" />
-								    <!-- Static Header -->
-								    <div class="header-text hidden-xs">
-									    <div class="col-md-12 text-center">
-									    </div>
-								    </div><!-- /header-text -->
 							    </div>
 							    <div class="item">
 								    <img src="/images/main-banner2-1903x600.jpg" alt="Second slide">
-								    <!-- Static Header -->
-								    <div class="header-text hidden-xs">
-									    <div class="col-md-12 text-center">
-									    </div>
-								    </div><!-- /header-text -->
 							    </div>
 							    <div class="item">
 								    <img src="/images/main-banner3-1903x600.jpg" alt="Third slide">
-								    <!-- Static Header -->
-								    <div class="header-text hidden-xs">
-									    <div class="col-md-12 text-center">
-									    </div>
-								    </div><!-- /header-text -->
 							    </div>
 						    </div>
 						    <!-- Controls -->
@@ -78,7 +63,9 @@
                                             Giá:
                                             <asp:Label ID="GIASANPHAMLabel" runat="server" Text='<%# Eval("GIASANPHAM") %>' />
                                             <br />
+                                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a><asp:Button ID="Button1" runat="server" Text="ADD To Cart" />
                                             <br />
+                                            <hr />
                                         </ItemTemplate>
                                     </asp:DataList>
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
@@ -114,7 +101,9 @@
                                             Giá:
                                             <asp:Label ID="GIASANPHAMLabel" runat="server" Text='<%# Eval("GIASANPHAM") %>' />
                                             <br />
+                                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a><asp:Button ID="Button1" runat="server" Text="ADD To Cart" />
                                             <br />
+                                            <hr />
                                 </ItemTemplate>
                             </asp:DataList>
 				            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
@@ -126,7 +115,7 @@
 			        </div>
 		        </div>
                 <!--Sony-->
-                			    <div class="row">
+                <div class="row">
 				    <div class="banner">
 					    <div class="col-sm-6">
 						    <img src="/images/sub-banner4.jpg" />
@@ -140,11 +129,8 @@
 				    <div class="col-lg-12">
 					    <div class="heading"><h2>SONY</h2></div>
 					    <div class="products">
-                                   
-				        </div>
-                        <asp:DataList ID="DataList3" runat="server" DataKeyField="IDSANPHAM" DataSourceID="SqlDataSource3" RepeatColumns="4" RepeatDirection="Horizontal">
+                            <asp:DataList ID="DataList3" runat="server" DataKeyField="IDSANPHAM" DataSourceID="SqlDataSource3" RepeatColumns="4" RepeatDirection="Horizontal">
                             <ItemTemplate>
-                                IDSANPHAM:
                                             <asp:Image ID="URl" runat="server" ImageUrl='<%# "~/images/"+Eval("URL") %>' />
                                             <br />
                                             <br />
@@ -153,18 +139,21 @@
                                             Giá:
                                             <asp:Label ID="GIASANPHAMLabel" runat="server" Text='<%# Eval("GIASANPHAM") %>' />
                                             <br />
+                                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a><asp:Button ID="Button1" runat="server" Text="ADD To Cart" />
                                             <br />
+                                            <hr />
                             </ItemTemplate>
                         </asp:DataList>
-			            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
-                            <SelectParameters>
-                                <asp:Parameter DefaultValue="3" Name="IDDANHMUC" Type="Int32" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
+				            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
+                                <SelectParameters>
+                                    <asp:Parameter DefaultValue="3" Name="IDDANHMUC" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+				        </div>
 			        </div>
 		        </div>
                 <!--Oppo-->
-                			    <div class="row">
+                <div class="row">
 				    <div class="banner">
 					    <div class="col-sm-6">
 						    <img src="/images/sub-banner4.jpg" />
@@ -178,9 +167,7 @@
 				    <div class="col-lg-12">
 					    <div class="heading"><h2>OPPO</h2></div>
 					    <div class="products">
-                                   
-				        </div>
-                        <asp:DataList ID="DataList4" runat="server" DataKeyField="IDSANPHAM" DataSourceID="SqlDataSource4" RepeatColumns="4" RepeatDirection="Horizontal">
+                           <asp:DataList ID="DataList4" runat="server" DataKeyField="IDSANPHAM" DataSourceID="SqlDataSource4" RepeatColumns="4" RepeatDirection="Horizontal">
                             <ItemTemplate>
                                             <asp:Image ID="URl" runat="server" ImageUrl='<%# "~/images/"+Eval("URL") %>' />
                                             <br />
@@ -190,14 +177,17 @@
                                             Giá:
                                             <asp:Label ID="GIASANPHAMLabel" runat="server" Text='<%# Eval("GIASANPHAM") %>' />
                                             <br />
+                                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a><asp:Button ID="Button1" runat="server" Text="ADD To Cart" />
                                             <br />
+                                            <hr />
                             </ItemTemplate>
-                        </asp:DataList>
-			            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
-                            <SelectParameters>
-                                <asp:Parameter DefaultValue="4" Name="IDDANHMUC" Type="Int32" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
+                           </asp:DataList>
+				            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM] WHERE ([IDDANHMUC] = @IDDANHMUC)">
+                                <SelectParameters>
+                                    <asp:Parameter DefaultValue="4" Name="IDDANHMUC" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+				        </div>
 			        </div>
 		        </div>
 	        </div>

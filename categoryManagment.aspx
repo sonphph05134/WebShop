@@ -2,38 +2,47 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="CphMain" Runat="Server">
     <div class="container">
+        <div class="container">
         <div class="row">
-				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="\">TRANG CHỦ</a></li>
-                        <li><a href="#">ADMIN</a></li>
-						<li><a href="categoryManagment.aspx">QUẢN LÝ DANH MỤC SẢN PHẨM</a></li>
-					</ul>
+				<div class="bg-primary" style="height:77px; font-size:30px;margin:5px">
+                    </br>
+					<p class="text-center"> TRANG QUẢN TRỊ DANH MỤC SẢN PHẨM</p>
 				</div>
 		</div>
-        <div class="addSP">
-             <a href="addcategory.aspx">Thêm danh mục sản phẩm</a>
-         </div>
-        <div class="quanlySP">
+        <div class="adddmsp">
+            <a class="bg-primary" href="addCategory.aspx">Thêm Danh Mục Sản Phẩm</a>
+            <br />
+        </div>
+
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IDDANHMUC" DataSourceID="SqlDataSource1">
         <Columns>
-            <asp:BoundField DataField="IDDANHMUC" HeaderText="ID Danh mục sản phẩm" InsertVisible="False" ReadOnly="True" SortExpression="IDDANHMUC" />
-            <asp:BoundField DataField="TENDM" HeaderText="Tên Danh mục sản phẩm" SortExpression="TENDM" />
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:BoundField DataField="IDDANHMUC" HeaderText="ID Danh Mục" InsertVisible="False" ReadOnly="True" SortExpression="IDDANHMUC" />
+            <asp:BoundField DataField="TENDM" HeaderText="Tên Danh Mục" SortExpression="TENDM" />
+            <asp:TemplateField ShowHeader="False">
+                <EditItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Select" Text="Select"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa không ?')"></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [DANHMUC] WHERE [IDDANHMUC] = @IDDANHMUC" InsertCommand="INSERT INTO [DANHMUC] ([TENDM]) VALUES (@TENDM)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDDANHMUC], [TENDM] FROM [DANHMUC]" UpdateCommand="UPDATE [DANHMUC] SET [TENDM] = @TENDM WHERE [IDDANHMUC] = @IDDANHMUC">
-        <DeleteParameters>
-            <asp:Parameter Name="IDDANHMUC" Type="Int32" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="TENDM" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="TENDM" Type="String" />
-            <asp:Parameter Name="IDDANHMUC" Type="Int32" />
-        </UpdateParameters>
-    </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [DANHMUC] WHERE [IDDANHMUC] = @IDDANHMUC" InsertCommand="INSERT INTO [DANHMUC] ([TENDM]) VALUES (@TENDM)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDDANHMUC], [TENDM] FROM [DANHMUC]" UpdateCommand="UPDATE [DANHMUC] SET [TENDM] = @TENDM WHERE [IDDANHMUC] = @IDDANHMUC">
+                <DeleteParameters>
+                    <asp:Parameter Name="IDDANHMUC" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="TENDM" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="TENDM" Type="String" />
+                    <asp:Parameter Name="IDDANHMUC" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
    </div>
  </div>
 </asp:Content>

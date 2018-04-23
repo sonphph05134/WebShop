@@ -11,4 +11,14 @@ public partial class addUser : System.Web.UI.Page
     {
 
     }
+
+    protected void InsertCmd(object sender, FormViewInsertedEventArgs e)
+    {
+        if (e.Exception != null)
+        {
+            e.KeepInInsertMode = true;
+            e.ExceptionHandled = true;
+            errmsg.Text = "Có lỗi xảy ra: " + e.Exception.Message;
+        }
+    }
 }
