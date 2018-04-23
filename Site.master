@@ -42,7 +42,7 @@
 	    <header class="container">
 		    <div class="row">
 			    <div class="col-md-4">
-				    <div id="logo"><asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png"/></div>
+				    <div id="logo"><asp:Image ID="ImageLogo" runat="server" ImageUrl="~/images/logo.png"/></div>
 			    </div>
 		    </div>
 	    </header>
@@ -51,7 +51,7 @@
 		    <div class="container">
 			    <div class="collapse navbar-collapse navbar-ex1-collapse">
 				    <ul class="nav navbar-nav">
-					    <li><a href="\">TRANG CHỦ</a></li>
+					    <li><a href="Default.aspx">TRANG CHỦ</a></li>
 					    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">SẢN PHẨM</a>
 						    <div class="dropdown-menu">
 							    <div class="dropdown-inner">
@@ -94,7 +94,7 @@
 			    <div class="wrap-footer">
 				    <div class="row">
 					    <div class="col-md-3 col-footer footer-1">
-						    <img src="~/images/logofooter.png" />
+						  <asp:Image ID="FooterLogo" runat="server" ImageUrl="~/images/logofooter.png" />
 						    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					    </div>
 					    <div class="col-md-3 col-footer footer-2">

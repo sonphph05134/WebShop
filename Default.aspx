@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="CphMain" Runat="Server">
-        		    <div class="container">
+        		<div class="container">
 			    <div class="row">
 				    <div class="col-lg-12">
 					    <!-- Carousel -->
@@ -15,13 +15,13 @@
 						    <!-- Wrapper for slides -->
 						    <div class="carousel-inner">
 							    <div class="item active">
-								    <img src="/images/main-banner1-1903x600.jpg" alt="First slide" />
+                                    <asp:Image ID="FirstSlide" runat="server" ImageUrl="~/images/main-banner1-1903x600.jpg" alt="First slide"/>
 							    </div>
 							    <div class="item">
-								    <img src="/images/main-banner2-1903x600.jpg" alt="Second slide">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/main-banner2-1903x600.jpg" alt="Second slide"/>
 							    </div>
 							    <div class="item">
-								    <img src="/images/main-banner3-1903x600.jpg" alt="Third slide">
+                                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/main-banner3-1903x600.jpg" alt="Third slide"/>
 							    </div>
 						    </div>
 						    <!-- Controls -->
@@ -37,13 +37,13 @@
 			    <div class="row">
 				    <div class="banner">
 					    <div class="col-sm-4">
-						    <img src="/images/sub-banner1.png" />
+                            <asp:Image ID="Image3" runat="server" ImageUrl="~/images/sub-banner1.png" />
 					    </div>
 					    <div class="col-sm-4">
-						    <img src="/images/sub-banner2.png" />
+                            <asp:Image ID="Image4" runat="server" ImageUrl="~/images/sub-banner2.png" />
 					    </div>
 					    <div class="col-sm-4">
-						    <img src="/images/sub-banner3.png" />
+                            <asp:Image ID="Image5" runat="server" ImageUrl="~/images/sub-banner3.png" />
 					    </div>
 				    </div>
 			    </div>
@@ -76,13 +76,13 @@
                                 </div>
 					    </div>
 			    </div>
-			    <div class="row">
+                <div class="row">
 				    <div class="banner">
 					    <div class="col-sm-6">
-						    <img src="/images/sub-banner4.jpg" />
+                            <asp:Image ID="Image10" runat="server" ImageUrl="~/images/sub-banner4.jpg" />
 					    </div>
 					    <div class="col-sm-6">
-						    <img src="/images/sub-banner5.png" />
+                            <asp:Image ID="Image11" runat="server" ImageUrl="~/images/sub-banner5.png" />
 					    </div>
 				    </div>
 			    </div>
@@ -118,10 +118,10 @@
                 <div class="row">
 				    <div class="banner">
 					    <div class="col-sm-6">
-						    <img src="/images/sub-banner4.jpg" />
+                            <asp:Image ID="Image8" runat="server" ImageUrl="~/images/sub-banner4.jpg" />
 					    </div>
 					    <div class="col-sm-6">
-						    <img src="/images/sub-banner5.png" />
+                            <asp:Image ID="Image9" runat="server" ImageUrl="~/images/sub-banner5.png" />
 					    </div>
 				    </div>
 			    </div>
@@ -156,10 +156,10 @@
                 <div class="row">
 				    <div class="banner">
 					    <div class="col-sm-6">
-						    <img src="/images/sub-banner4.jpg" />
+                            <asp:Image ID="Image7" runat="server" ImageUrl="~/images/sub-banner4.jpg" />
 					    </div>
 					    <div class="col-sm-6">
-						    <img src="/images/sub-banner5.png" />
+                            <asp:Image ID="Image6" runat="server" ImageUrl="~/images/sub-banner5.png" />
 					    </div>
 				    </div>
 			    </div>
