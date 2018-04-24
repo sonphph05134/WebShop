@@ -31,7 +31,7 @@
 						    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 							    <span class="glyphicon glyphicon-chevron-right"></span>
 						    </a>
-					    </div><!-- /carousel -->
+					    </div>
 				    </div>
 			    </div>
 			    <div class="row">
