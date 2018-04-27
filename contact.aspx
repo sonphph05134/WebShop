@@ -6,7 +6,7 @@
         <script type="text/javascript" src="dinhdangchinhapso.js"></script>
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="heading"><h1>LIÊN HỆ VỚI CHÚNG TÔI</h1></div>                
+					<div class="heading"><h1><p class="text-info">LIÊN HỆ VỚI CHÚNG TÔI</p></h1></div>                
 				</div>
 				<div class="col-md-6" style="margin-bottom: 30px;">
 					<form name="form1" id="ff" method="post" action="contact.php">
@@ -24,13 +24,14 @@
 							<textarea class="form-control" placeholder="Nhập tin nhắn *" name="message" id="message" required data-validation-required-message="Vui lòng nhập tin nhắn."></textarea>
 						</div>
 						<button type="submit" class="btn btn-1">Gửi tin nhắn</button>
+                        <button type="reset" class="btn btn-1" value="Reset">Reset</button>
 					</form>
-                        <button type="reset" class="btn btn-3" value="Reset">Reset</button>
+                        
 				</div>
 				<div class="col-md-6">
-					<p><span class="glyphicon glyphicon-home" style="color:#00c6fc"></span>... 55 Phùng Hưng, P. Phúc La, Hà Đông, Hà Nội, Việt Nam </p>
-					<p><span class="glyphicon glyphicon-earphone" style="color:#00c6fc"></span>... 084 +091 8866888111</p>
-					<p><span class="glyphicon glyphicon-envelope" style="color:#00c6fc"></span>... Tuan1998@gmail.com</p>
+					<span class="glyphicon glyphicon-home" style="color:#00c6fc"></span><p>55 Phùng Hưng, P. Phúc La, Hà Đông, Hà Nội, Việt Nam </p>
+					<span class="glyphicon glyphicon-earphone" style="color:#00c6fc"></span><p>084 +091 8866888111</p>
+					<span class="glyphicon glyphicon-envelope" style="color:#00c6fc"></span><p>Tuan1998@gmail.com</p>
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.5390372896795!2d105.78163625065162!3d20.971018985961148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acd4e7d7f5a9%3A0x871e90be2f3115c5!2zNTUgUGjDuW5nIEjGsG5nLCBQaMO6YyBMYSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1524332151354" width="600" height="450" frameborder="0" style="border:#808080 solid 2px" allowfullscreen></iframe>
 				</div>
 			</div>
