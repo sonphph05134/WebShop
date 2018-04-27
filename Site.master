@@ -31,8 +31,8 @@
 				    </div>
 				    <div class="col-xs-6">
 					    <ul class="top-link">
-						    <li><a href="account.aspx"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
-						    <li><a href="contact.aspx"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+						    <li><a href="account.aspx"><span class="glyphicon glyphicon-user" style="color:#0094ff"></span>....Tài khoản</a></li>
+						    <li><a href="contact.aspx"><span class="glyphicon glyphicon-envelope"style="color:#0094ff"></span>....Liên Hệ</a></li>
 					    </ul>
 				    </div>
 			    </div>
