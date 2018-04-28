@@ -16,28 +16,52 @@
         <div class="quanlySP">
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IDSANPHAM" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:BoundField DataField="IDSANPHAM" HeaderText="ID Sản Phẩm" InsertVisible="False" ReadOnly="True" SortExpression="IDSANPHAM" />
-                    <asp:BoundField DataField="IDDANHMUC" HeaderText="ID Danh Mục" SortExpression="IDDANHMUC" />
-                    <asp:BoundField DataField="MASANPHAM" HeaderText="Mã Sản Phẩm" SortExpression="MASANPHAM" />
-                    <asp:BoundField DataField="TENSANPHAM" HeaderText="Tên Sản Phẩm" SortExpression="TENSANPHAM" />
-                    <asp:BoundField DataField="GIASANPHAM" HeaderText="Giá Sản Phẩm" SortExpression="GIASANPHAM" />
-                    <asp:BoundField DataField="MOTASANPHAM" HeaderText="Mô Tả Sản Phẩm" SortExpression="MOTASANPHAM" />
-                    <asp:BoundField DataField="URL" HeaderText="Tên File Ảnh" SortExpression="URL" />
+                    <asp:BoundField DataField="IDSANPHAM" HeaderText="ID Sản Phẩm" InsertVisible="False" ReadOnly="True" SortExpression="IDSANPHAM" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="IDDANHMUC" HeaderText="ID Danh Mục" SortExpression="IDDANHMUC" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="MASANPHAM" HeaderText="Mã Sản Phẩm" SortExpression="MASANPHAM" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="TENSANPHAM" HeaderText="Tên Sản Phẩm" SortExpression="TENSANPHAM" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="GIASANPHAM" HeaderText="Giá Sản Phẩm" SortExpression="GIASANPHAM" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="MOTASANPHAM" HeaderText="Mô Tả Sản Phẩm" SortExpression="MOTASANPHAM" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="URL" HeaderText="Tên File Ảnh" SortExpression="URL" >
+                    <HeaderStyle ForeColor="#6600CC" />
+                    <ItemStyle ForeColor="#6600CC" />
+                    </asp:BoundField>
                     <asp:TemplateField HeaderText="Ảnh Sản Phẩm">
                         <ItemTemplate>
                             <asp:Image ID="URl" runat="server" ImageUrl='<%# "~/images/"+Eval("URL") %>' width="150px"/>
                         </ItemTemplate>
+                        <HeaderStyle ForeColor="#6600CC" />
                     </asp:TemplateField>
                     <asp:TemplateField ShowHeader="False">
                         <EditItemTemplate>
-                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
-                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update" ForeColor="#6600CC"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" ForeColor="#6600CC"></asp:LinkButton>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>
-                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Select" Text="Select"></asp:LinkButton>
-                            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa không ?')"></asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" ForeColor="#6600CC"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Select" Text="Select" ForeColor="#6600CC"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa không ?')" ForeColor="#6600CC"></asp:LinkButton>
                         </ItemTemplate>
+                        <FooterStyle ForeColor="#6600CC" />
+                        <ItemStyle ForeColor="#6600CC" />
                     </asp:TemplateField>
 
                 </Columns>
