@@ -5,7 +5,7 @@
         <div class="row">
 				<div class="bg-primary" style="height:77px; font-size:30px;margin:5px">
                     </br>
-					<p class="text-center"> TRANG QUẢN TRỊ NGƯỜI DÙNG</p>
+					<p class="text-center"> TRANG QUẢN TRỊ NGƯỜI DÙNG..</p>
 				</div>
 		</div>
         <div class="addnd">
