@@ -10,15 +10,21 @@
 				</div>
 		</div>
         <div class="adddmsp">
-            <a class="bg-primary" href="addCategory.aspx">Thêm Danh Mục Sản Phẩm</a>
+            <a class="bg-primary" href="addCategory.aspx" >Thêm Danh Mục Sản Phẩm..</a>
             <br />
         </div>
-
+            
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IDDANHMUC" DataSourceID="SqlDataSource1">
         <Columns>
-            <asp:BoundField DataField="IDDANHMUC" HeaderText="ID Danh Mục" InsertVisible="False" ReadOnly="True" SortExpression="IDDANHMUC" />
-            <asp:BoundField DataField="TENDM" HeaderText="Tên Danh Mục" SortExpression="TENDM" />
-            <asp:TemplateField ShowHeader="False">
+            <asp:BoundField DataField="IDDANHMUC" HeaderText="ID Danh Mục"  InsertVisible="False" ReadOnly="True" SortExpression="IDDANHMUC" >
+            <HeaderStyle ForeColor="#FFCC00" />
+            <ItemStyle ForeColor="#FFCC00" />
+            </asp:BoundField>
+            <asp:BoundField DataField="TENDM" HeaderText="Tên Danh Mục" SortExpression="TENDM" >
+            <HeaderStyle ForeColor="#FFCC00" />
+            <ItemStyle ForeColor="#FFCC00" />
+            </asp:BoundField>
+            <asp:TemplateField ShowHeader="False" HeaderText="Chức năng">
                 <EditItemTemplate>
                     <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
@@ -28,6 +34,9 @@
                     &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Select" Text="Select"></asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa không ?')"></asp:LinkButton>
                 </ItemTemplate>
+                <ControlStyle ForeColor="#FFCC00" />
+                <HeaderStyle BackColor="White" ForeColor="#FFCC00" />
+                <ItemStyle ForeColor="#FFCC00" />
             </asp:TemplateField>
         </Columns>
     </asp:GridView>

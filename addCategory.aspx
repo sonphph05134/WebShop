@@ -27,10 +27,10 @@
         </InsertItemTemplate>
         <ItemTemplate>
             IDDANHMUC:
-            <asp:Label ID="IDDANHMUCLabel" runat="server" Text='<%# Eval("IDDANHMUC") %>' />
+            <asp:Label ID="IDDANHMUCLabel" runat="server" Text='<%# Eval("IDDANHMUC") %>'  ForeColor="#ffcc00"/>
             <br />
             TENDM:
-            <asp:Label ID="TENDMLabel" runat="server" Text='<%# Bind("TENDM") %>' />
+            <asp:Label ID="TENDMLabel" runat="server" Text='<%# Bind("TENDM") %>' ForeColor="#ffcc00" />
             <br />
             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
