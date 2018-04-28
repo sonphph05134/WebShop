@@ -14,7 +14,8 @@
         </div>
          
         <div class="quanlySP">
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IDSANPHAM" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="IDSANPHAM" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
+                <AlternatingRowStyle BackColor="#F7F7F7" />
                 <Columns>
                     <asp:BoundField DataField="IDSANPHAM" HeaderText="ID Sản Phẩm" InsertVisible="False" ReadOnly="True" SortExpression="IDSANPHAM" >
                     <HeaderStyle ForeColor="#6600CC" />
@@ -65,6 +66,15 @@
                     </asp:TemplateField>
 
                 </Columns>
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                <SortedDescendingHeaderStyle BackColor="#3E3277" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\WebShopOnline.mdf;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [SANPHAM] WHERE [IDSANPHAM] = @IDSANPHAM" InsertCommand="INSERT INTO [SANPHAM] ([IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL]) VALUES (@IDDANHMUC, @MASANPHAM, @TENSANPHAM, @GIASANPHAM, @MOTASANPHAM, @URL)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [IDSANPHAM], [IDDANHMUC], [MASANPHAM], [TENSANPHAM], [GIASANPHAM], [MOTASANPHAM], [URL] FROM [SANPHAM]" UpdateCommand="UPDATE [SANPHAM] SET [IDDANHMUC] = @IDDANHMUC, [MASANPHAM] = @MASANPHAM, [TENSANPHAM] = @TENSANPHAM, [GIASANPHAM] = @GIASANPHAM, [MOTASANPHAM] = @MOTASANPHAM, [URL] = @URL WHERE [IDSANPHAM] = @IDSANPHAM">
                 <DeleteParameters>
