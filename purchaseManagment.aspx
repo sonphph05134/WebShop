@@ -5,11 +5,11 @@
         <div class="row">
 				<div class="bg-primary" style="height:77px; font-size:30px;margin:5px">
                     </br>
-					<p class="text-center"> TRANG QUẢN TRỊ HÓA ĐƠN</p>
+					<p class="text-center"> TRANG QUẢN TRỊ ĐƠN HÀNG</p>
 				</div>
 		</div>
         <div class="addhd">
-            <a class="bg-primary" href="addPurchase.aspx">Thêm Hóa Đơn</a>
+            <a class="bg-primary" href="addPurchase.aspx">Thêm Đơn Hàng</a>
             <br />
         </div>
     <div class="qlHD">
